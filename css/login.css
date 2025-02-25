@@ -1,0 +1,117 @@
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    overflow: scroll;
+}
+.bdy{
+    background-color: #52859e;
+    width: 100vw;
+    height: 100vh;
+}
+.form{
+    height: clamp(385px,48%,450px);
+    width: clamp(350px,40%,450px);
+    box-shadow: 0 0 5px rgb(57, 56, 56);
+    border-radius: 5px;
+    gap: .5rem;
+}
+.grid{
+    display: grid;
+    place-items: center;
+}
+.mc{
+    margin-left: 20px;
+}
+.ms{
+    margin-left: 15px;
+}
+.g{
+    gap: .5rem;
+}
+.signin{
+    width: 100%;
+    height: 100%;
+}
+.signin input{
+    width: 100%;
+    height: 1.9rem;
+}
+.login input{
+    width: 100%;
+    height: 50%;
+    margin-block:.5rem;
+}
+.hide{
+    display: none;
+}
+.t-align{
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+.w{
+    width: 50%;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.c{
+    flex-direction: row;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    border-radius: 5px;
+    outline: none;
+}
+.wel{
+    margin-top: .5rem;
+    height: clamp(55px,30px,65px);
+    width: 100%;
+    color: #8fc4df;
+    font-size: min(max(1.2rem,2vh),3rem);
+    text-align: center;
+    background-color: rgb(57, 56, 56);
+}
+.w{
+    font-size: min(max(13px,2vh),20px);
+    width: 85%;
+    border-radius: clamp(25px,2px,16px);
+}
+@media(width <= 310px) and (height <=320px){
+    .bdy .form{
+        font-size: .7rem;
+    }
+    .wel{
+        font-size: 1rem;
+    }
+}
+nav{
+    height: 10vh;
+    width: 100vw;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.buu{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.out{
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
