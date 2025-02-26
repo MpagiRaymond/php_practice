@@ -2,7 +2,6 @@
 if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
-
 require "conn.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
