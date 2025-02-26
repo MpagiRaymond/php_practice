@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_SESSION["name"] = "$sname";
 
         echo "<script>
-        alert('Data successfully sent');
+        alert('" .$_SESSION['name'] . "' + 'Successfully registered');
         window.location.href = 'http://localhost/familly/?p=home';
       </script>";
 exit();
