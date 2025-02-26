@@ -1,10 +1,13 @@
 <?php
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+// session_start();
 
 if(isset($_SESSION["name"])){
     
-echo "hahaha";
+require "home.php";
 }else{
    echo "<script>
         alert('Data successfully sent');

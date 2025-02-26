@@ -18,8 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $_SESSION["name"] = "$name";
 
             echo "<script>
-            alert('login successfully ' + '" . $_SESSION['name'] . "');
-            window.location.href = 'http://localhost/familly/?p=hospital';
+            alert('Your welcome ' + '" . $_SESSION['name'] . "');
+            window.location.href = 'http://localhost/familly/?p=school';
             </script>";
             exit();
         }else{

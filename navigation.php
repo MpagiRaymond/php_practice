@@ -12,15 +12,20 @@
             }
         ?>
     <div class="others">
-        <a href="./?p=home">Home</a>
+        <!-- <a href="./?p=home">Home</a> -->
         <a href="./?p=about"> About</a>
-        <a href="./?p=login"> Contacts</a>
-        <a href="./?p=signup"> Signup</a>
-        <a href="./?p=home"> notifications</a>
+        <!-- <a href="./?p=login"> Contacts</a> -->
+        <!-- <a href="./?p=signup"> Signup</a> -->
+        <!-- <a href="./?p=home"> notifications</a> -->
         <?php
             if(isset($_SESSION['name'])){
         ?>
-        <a href="./?p=school"> School</a>
+        <a href="./?p=school"> Home</a>
+        <?php
+            }else{
+        ?>
+       <a href="./?p=login"> Contacts</a>
+       <a href="./?p=signup"> Signup</a>
         <?php
             }
             ?>

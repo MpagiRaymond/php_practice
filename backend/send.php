@@ -1,4 +1,8 @@
 <?php
+if(session_status() == PHP_SESSION_NONE){
+    session_start();
+}
+
 require "conn.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -15,7 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (isset($sname) && isset($semail) && isset($sinformation)|| isset($spwd)) {
 
     // $sql = "INSERT INTO details (NAME, EMAIL, INFORMATION) VALUES ('$sname', '$semail', '$sinformation')";
-    if ($conn->query("INSERT INTO details (NAME, EMAIL, INFORMATION) VALUES ('$sname', '$semail', '$sinformation', '$spwd')")) {
+    if ($conn->query("INSERT INTO details (NAME, EMAIL, INFORMATION, PWD) VALUES ('$sname', '$semail', '$sinformation', '$spwd')")) {
+        
+        // setting sessions variables
+        $_SESSION["name"] = "$sname";
+
         echo "<script>
         alert('Data successfully sent');
         window.location.href = 'http://localhost/familly/?p=home';
