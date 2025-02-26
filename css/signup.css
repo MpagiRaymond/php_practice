@@ -5,6 +5,8 @@ body, section,.first_page{
 	align-items:center;
 }
 .first_page{
+	display: grid;
+	place-items: center;
 	border-radius:20px;
 	padding:13px 10px 10px;;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -65,7 +67,8 @@ nav,header,ul{
 }
 .top{
     margin: 10px;
-	font-size:50px;
+	/* font-size:50px; */
+	font-size: 8vw;
 	font-family:sans-serif;
 	color:#ff00ff;
 }
@@ -74,6 +77,9 @@ nav,header,ul{
     width: 100%;
 }
 .input{
+	flex-wrap: wrap;
+	width: 100%;
+	position:relative;
     height: 2.5rem;
     padding:10px;
     background: transparent;

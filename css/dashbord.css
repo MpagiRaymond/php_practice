@@ -42,3 +42,12 @@ main{
     height: 100%;
 
 }
+@media(width <= 510px){
+    form{
+        max-width: 90%;
+    }
+    .input-group{
+        max-width: 90%;
+        /* background-color: red; */
+    }
+}

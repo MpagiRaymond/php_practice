@@ -86,7 +86,7 @@ main{
 }
 @media(width <= 310px) and (height <=320px){
     .bdy .form{
-        font-size: .7rem;
+        font-size: .4rem;
     }
     .wel{
         font-size: 1rem;
