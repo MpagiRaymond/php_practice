@@ -18,14 +18,21 @@
         <a href="./?p=signup"> Signup</a>
         <a href="./?p=home"> notifications</a>
         <?php
-
+            if(isset($_SESSION['name'])){
         ?>
         <a href="./?p=school"> School</a>
         <?php
-
-        ?>
+            }
+            ?>
     </div>
+    <?php
+            if(isset($_SESSION['name'])){
+                ?>
     <form class="out" action="backend/destroy.php" method="post">
+        <a href="#" style="color:lightblue; font-size: 1.3em"><?php echo $_SESSION['name'] ?></a>
         <button class="buu" type="submit">logout</button>
     </form>
+        <?php
+            }
+        ?>
 </nav>

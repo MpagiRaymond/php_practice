@@ -1,8 +1,13 @@
 <?php
+session_start();
+
+// unset all session variables
+$_SESSION = array();
+
+// destroy session
 session_destroy();
-echo "<script>
-    
-    window.href.location = 'http://localhost/familly/?p=signup';
-    </script>";
+
+ // Redirect to the login page or any other page
+header("Location: http://localhost/familly/?p=login");
     exit();
 ?>
