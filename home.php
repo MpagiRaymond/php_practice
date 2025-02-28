@@ -9,6 +9,10 @@ $result = mysqli_query($conn, $query);
         margin-top: 20px;
         background-color: #f9f9f9;
     }
+    .table-container {
+        max-height: 300px; /* Set your desired max height */
+        overflow-y: scroll; /* Enable vertical scrolling */
+    }
     .table th {
         background-color: #007bff;
         color: white;
@@ -16,9 +20,18 @@ $result = mysqli_query($conn, $query);
     .table-hover tbody tr:hover {
         background-color: #e9ecef;
     }
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 </style>
 <article class="slide">
-<table class="table table-bordered table-hover table-striped">
+
+    <div class="table-container">
+    <table class="table table-bordered table-hover table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -51,3 +64,32 @@ $result = mysqli_query($conn, $query);
         </tbody>
     </table>
 </article>
+</div>
+
+<!-- comments -->
+<div class="comments-container">
+    <h2>Comments</h2>
+    <div class="comments-list">
+        <?php
+        require "backend/comm.php";
+
+        $sql = "SELECT name, comment FROM personal_views ORDER BY name DESC";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                // print_r($row);
+                echo "<div class='comment'>";
+                echo "<p><strong>" . htmlspecialchars($row["name"]) . "</strong> (" . $row["name"] . ")</p>";
+                echo "<p>" . nl2br(htmlspecialchars($row["comment"])) . "</p>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No comments yet. Be the first to comment!</p>";
+        }
+
+        $conn->close();
+        ?>
+    </div>
+</div>

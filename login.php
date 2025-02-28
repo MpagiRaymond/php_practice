@@ -12,9 +12,10 @@ if(isset($_POST['submit'])){
 <?php include "css/login.css"?>
 main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 </style>
 <script src="javascript/login.js" defer>
@@ -41,6 +42,19 @@ main{
         <div class="input wel">Your presence matters.</div>
     </div>
 </form>
+            
+<div class="comment-form-container">
+        <h2>We would want to see your respose to our website.</h2>
+        <form class="comment-form" method="post" action="backend/comments.php">
+            <div class="form-group">
+                <label for="comment">Name</label>
+                <textarea id="comment" name="names" rows="5" required></textarea>
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+</div>
 <script src="javascript/login.js" defer>
 </script>
 <?php
